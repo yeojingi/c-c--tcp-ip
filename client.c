@@ -42,7 +42,12 @@ int main(int argc, char** argv) {
   unsigned char msg[100] = {0x01, 2, 3, 4, 5, 6, 1, 2, 3, 4, 2, 1, 2, 3, 0x0c};
 
   while (1) {
-    printf("send: \n");
+    printf("send: ", msg);
+
+    for (int i = 0; i < 15; i++) {
+      printf("%02X ", msg[i]);
+    }
+    printf("\n");
 
     write(sock, msg, 15);
 

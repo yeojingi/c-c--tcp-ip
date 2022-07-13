@@ -77,7 +77,7 @@ int main(int argc, char** argv)
       
       printf("recv: ");
       for (int i = 0; i < recv_len; i++) {
-        printf("%02X", (unsigned char)buff[i]);
+        printf("%02X ", (unsigned char)buff[i]);
       }
       printf("\n");
     }
