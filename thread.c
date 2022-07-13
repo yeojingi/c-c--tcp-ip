@@ -36,8 +36,9 @@ int main()
     // 인자 3 - 스레드 함수
     // 인자 4 - 아이디
   pthread_create(&s_thread[1], NULL, thread1, (void*)id2);
+
+  // 조인
   pthread_join(s_thread[0], NULL);
   pthread_join(s_thread[1], NULL);
-
-    
+    // 조인 하지 않으면 main이 끝날 때 프로그램이 꺼짐.
 }
